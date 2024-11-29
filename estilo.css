@@ -1,0 +1,284 @@
+/*GERALZÃO*/
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h1{
+    color: yellow;
+    text-decoration: dotted;
+    font-size: 25px;
+}
+
+
+
+/*CABEÇALHO*/
+
+header {
+    padding:10px 0%;
+    background-color: #000;
+}
+
+header h1 {
+    color: yellow;
+    font-size: 30px;
+}
+
+header nav{ /* Faz a navbar ficar fixa no topo */
+    top: 0;
+    left: 0;
+    position: fixed;
+    list-style: none;
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000; 
+    background: black;
+}
+
+header nav .bar{
+    background-color: #000;
+}
+
+nav ul {
+    list-style: none; /* Remove os pontos da lista */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block; /* Coloca os itens em linha */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+
+
+
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header button:focus a:focus{ /*Ativa o link presente nos botões*/
+    outline: none;
+}
+
+button a {
+    text-decoration: none;  /* Remover sublinhado do link */
+    color: yellow;            /* Cor do texto do link */
+  }
+
+header button:hover {
+    transform: scale(1.1); 
+    background-color: #444;
+}
+
+header button{
+    background-color: black;
+    color: yellow;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 20px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+/*CORPO*/
+
+.sob{
+    color: chocolate;
+    font-size: 26px;
+}
+
+.num{
+    margin-top: 20px;
+}
+
+main{
+    padding: 10PX 4%;
+}
+
+.flex{
+    display: flex;
+}
+
+/*Estilo do topo*/
+
+.topo-do-site {   /* Estilo para o conteúdo abaixo da navbar */
+    margin-top: 100px; /* Deixa um espaço para a navbar fixa não cobrir o conteúdo */
+    padding: 20px;
+    font-family: Arial, sans-serif; 
+}
+
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    font-size: 18px;
+}
+
+
+.topo-do-site .img-topo-site img{ /*Prepara a imagem pra se mecher*/
+    position: relative;
+    animation: voa 2s ease-in-out infinite alternate;
+}
+
+@keyframes voa{ /*Faz a imagem se mecher*/
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*ESPECIALIDADES*/
+
+section.especialidades{
+    padding: 40px 2%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #fff200;
+    transition: 0.3s ease;
+    margin-top: 12px;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.1);
+}
+
+.especialidades .especialidades-box i{
+    color: #fff200;
+    font-size: 70px;
+}
+
+
+/*ESTILO DOS TRAB*/
+
+section.portfolio{
+    padding: 80px 4%;
+}
+section.portfolio .flex{
+    transition: 0.3s ease;
+    justify-content: space-between;
+}
+
+.imagem:hover{
+    background-position: 80% 0%;
+}
+
+.imagem{
+    width: 360px;
+    height: 460px;
+    background-color: #fff200;
+    background-size: 150%;
+    background-position: 35% 0%;
+    transition: 2s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d0c618af;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+}
+
+/*ESTILO DO RODAPÉ*/
+
+footer{
+    margin: 1000 auto;
+    padding: 5px 10%; 
+    background-color: rgb(182, 182, 182);
+    margin-top: 100px;
+}
+
+footer.flex{
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer.bt-social{
+    justify-content: flex-end;
+}
+
+footer .img-eniac{
+    margin-top: 20px;
+}
+
+footer .bt-social button {
+    margin-top: 10px;
+    background-color: #fff200;
+    border: none; 
+    padding: 10px; 
+    cursor: pointer;
+    border-radius: 50%; 
+    margin-left: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+footer .bt-social button:hover {
+    background-color: #f0f0f0; 
+}
+
+footer .bt-social i {
+    font-size: 24px;
+    color: #000; 
+}
+
+
